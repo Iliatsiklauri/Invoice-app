@@ -13,3 +13,9 @@
 .box {
   border-radius: 22px 0px 22px 0px;
 }
+.filt {
+  box-shadow: 0px 10px 20px 0px rgba(72, 84, 159, 0.25);
+}
+.filt1 {
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+}
