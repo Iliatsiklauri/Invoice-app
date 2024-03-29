@@ -1,8 +1,8 @@
 'use client';
 import { motion } from 'framer-motion';
 import { useData } from './Wrapper';
-import Filter from './components/Filter';
-import Card from './components/Card';
+import Filter from './components/Home/Filter';
+import Card from './components/Home/Card';
 import Image from 'next/image';
 import Link from 'next/link';
 

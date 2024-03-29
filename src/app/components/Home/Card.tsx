@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { useData } from '../Wrapper';
-import { CardType } from '../data';
+import { useData } from '../../Wrapper';
+import { CardType } from '../../data';
 
 export default function Card({ clientName, id, paymentDue, status, total }: CardType) {
   const { mode } = useData();

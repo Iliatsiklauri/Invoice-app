@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import { useData } from '../Wrapper';
+import { useData } from '../../Wrapper';
 import { motion, spring } from 'framer-motion';
 
 export default function Filter() {

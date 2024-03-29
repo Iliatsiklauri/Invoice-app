@@ -1,5 +1,5 @@
 import React from 'react';
-import { useData } from '../Wrapper';
+import { useData } from '../../Wrapper';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 

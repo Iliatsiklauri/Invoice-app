@@ -2,7 +2,7 @@
 import { useContext, useState } from 'react';
 import res from '@/app/data.json';
 import { GlobalWrapper, PropType } from './data';
-import Header from './components/Header';
+import Header from './components/Home/Header';
 export default function Wrapper({ children }: { children: React.ReactNode }) {
   const [data, setData] = useState(res);
   const [mode, setMode] = useState(false);
