@@ -52,7 +52,7 @@ export default function Filter() {
             transition={{ type: 'spring', damping: 20 }}
             className={`${
               mode ? 'filt1' : 'filt'
-            } absolute h-[130px]  bg-black rounded-[8px] overflow-hidden flex items-center justify-center`}
+            } absolute h-[130px]  bg-black rounded-[8px] overflow-hidden flex items-center justify-center z-20`}
           >
             <motion.div
               initial={{ display: 'none' }}
@@ -69,7 +69,9 @@ export default function Filter() {
                   type="checkbox"
                   name=""
                   id=""
-                  className="checkbox cursor-pointer w-4 h-4"
+                  className={`${
+                    mode ? 'bg-[#1E2139] ' : 'bg-[#DFE3FA]'
+                  } checkbox rounded-[2px] relative cursor-pointer w-4 h-4 border-[#7C5DFA] border-[1px]`}
                 />
                 <p
                   className={`font-bold text-[15px] ${
@@ -84,7 +86,9 @@ export default function Filter() {
                   type="checkbox"
                   name=""
                   id=""
-                  className="checkbox cursor-pointer w-4 h-4"
+                  className={`${
+                    mode ? 'bg-[#1E2139] ' : 'bg-[#DFE3FA]'
+                  } checkbox rounded-[2px] relative cursor-pointer w-4 h-4 border-[#7C5DFA] border-[1px]`}
                 />
                 <p
                   className={`font-bold text-[15px] ${
@@ -99,7 +103,9 @@ export default function Filter() {
                   type="checkbox"
                   name=""
                   id=""
-                  className="checkbox cursor-pointer w-4 h-4"
+                  className={`${
+                    mode ? 'bg-[#1E2139] ' : 'bg-[#DFE3FA]'
+                  } checkbox rounded-[2px] relative cursor-pointer w-4 h-4 border-[#7C5DFA] border-[1px]`}
                 />
                 <p
                   className={`font-bold text-[15px] ${

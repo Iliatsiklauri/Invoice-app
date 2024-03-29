@@ -15,7 +15,7 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
         setMode,
       }}
     >
-      <div className="w-full h-screen flex flex-col">
+      <div className="w-full flex flex-col">
         <Header />
         {children}
       </div>

@@ -2,7 +2,16 @@
 
 import { Dispatch, SetStateAction, createContext } from 'react';
 
-type DataType = {
+export type CardType = {
+  key: number;
+  id: string;
+  paymentDue: string;
+  clientName: string;
+  status: string;
+  total: number;
+};
+
+export type DataType = {
   id: string;
   createdAt: string;
   paymentDue: string;
