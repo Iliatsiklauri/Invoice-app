@@ -1,3 +1,7 @@
+'use client';
+import { useData } from './Wrapper';
+
 export default function Home() {
-  return <></>;
+  const { data, setData, mode, setMode } = useData();
+  return <div className=""></div>;
 }
