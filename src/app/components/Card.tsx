@@ -2,17 +2,13 @@ import { motion } from 'framer-motion';
 import { useData } from '../Wrapper';
 import { CardType } from '../data';
 
-export default function Card({
-  clientName,
-  id,
-  key,
-  paymentDue,
-  status,
-  total,
-}: CardType) {
+export default function Card({ clientName, id, paymentDue, status, total }: CardType) {
   const { mode } = useData();
   return (
     <motion.div
+      initial={{
+        background: '#FFF',
+      }}
       animate={{
         background: mode ? '#1E2139' : '#FFF',
       }}

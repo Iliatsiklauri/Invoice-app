@@ -3,7 +3,6 @@
 import { Dispatch, SetStateAction, createContext } from 'react';
 
 export type CardType = {
-  key: number;
   id: string;
   paymentDue: string;
   clientName: string;
