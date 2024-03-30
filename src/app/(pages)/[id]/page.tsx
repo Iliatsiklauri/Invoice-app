@@ -1,6 +1,7 @@
 'use client';
 import { useData } from '@/app/Wrapper';
 import Goback from '@/app/components/about/Goback';
+import Info from '@/app/components/about/Info';
 import Status from '@/app/components/about/Status';
 import { DataType } from '@/app/data';
 import { useEffect, useState } from 'react';
@@ -11,7 +12,6 @@ type Params = {
   };
 };
 
-// Refactored to a proper React function component
 export default function Page({ params }: Params) {
   const [ans, setAns] = useState<DataType | null>(null);
   const { mode, data } = useData();
@@ -19,7 +19,7 @@ export default function Page({ params }: Params) {
 
   useEffect(() => {
     setAns(a[0]);
-  }, [a]); // Fixed missing dependency 'a' in useEffect dependency array
+  }, []);
 
   return (
     <div
@@ -29,6 +29,7 @@ export default function Page({ params }: Params) {
     >
       <Goback />
       <Status status={`${ans?.status}`} />
+      <Info el={ans} />
     </div>
   );
 }
