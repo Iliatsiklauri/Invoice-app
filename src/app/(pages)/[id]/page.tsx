@@ -11,13 +11,16 @@ type Params = {
   };
 };
 
-export default function page({ params }: Params) {
+// Refactored to a proper React function component
+export default function Page({ params }: Params) {
   const [ans, setAns] = useState<DataType | null>(null);
   const { mode, data } = useData();
   const a = data.filter((el) => el.id === params.id);
+
   useEffect(() => {
     setAns(a[0]);
-  }, []);
+  }, [a]); // Fixed missing dependency 'a' in useEffect dependency array
+
   return (
     <div
       className={`flex items-start justify-center flex-col px-6 py-10 ${
