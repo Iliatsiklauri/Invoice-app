@@ -1,20 +1,12 @@
-import { motion } from 'framer-motion';
 import { useData } from '../../Wrapper';
 import { CardType } from '../../data';
 
 export default function Card({ clientName, id, paymentDue, status, total }: CardType) {
   const { mode } = useData();
   return (
-    <motion.div
-      initial={{
-        background: '#FFF',
-      }}
-      animate={{
-        background: mode ? '#1E2139' : '#FFF',
-      }}
-      transition={{ type: 'tween' }}
+    <div
       className={`w-full rounded-[8px] h-[134px] cursor-pointer ${
-        mode ? 'opt1' : 'opt2'
+        mode ? 'opt1 bg-[#1E2139] ' : 'opt2 bg-[#FFF]'
       } flex items-start justify-between  flex-wrap px-6 py-4`}
     >
       <div className="flex flex-col items-start justify-between h-full">
@@ -63,6 +55,6 @@ export default function Card({ clientName, id, paymentDue, status, total }: Card
           </p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

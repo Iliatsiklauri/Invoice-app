@@ -1,5 +1,4 @@
 'use client';
-import { motion } from 'framer-motion';
 import { useData } from './Wrapper';
 import Filter from './components/Home/Filter';
 import Card from './components/Home/Card';
@@ -9,11 +8,10 @@ import Link from 'next/link';
 export default function Home() {
   const { data, setData, mode, setMode } = useData();
   return (
-    <motion.div
-      className={`h-full flex items-center justify-start flex-col px-6 py-8 gap-8 min-h-screen`}
-      initial={{ background: '#F8F8FB' }}
-      animate={{ background: mode ? '#141625' : '#F8F8FB' }}
-      transition={{ type: 'tween' }}
+    <div
+      className={`h-full flex items-center justify-start flex-col px-6 py-8 gap-8 min-h-screen ${
+        mode ? 'bg-[#141625]' : 'bg-[#F8F8FB]'
+      }`}
     >
       <Filter />
       {data.length > 0 ? null : (
@@ -49,6 +47,6 @@ export default function Home() {
           </Link>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 }

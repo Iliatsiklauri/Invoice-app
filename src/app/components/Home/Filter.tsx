@@ -2,7 +2,8 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { useData } from '../../Wrapper';
-import { motion, spring } from 'framer-motion';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Filter() {
   const { mode } = useData();
@@ -118,12 +119,14 @@ export default function Filter() {
             </motion.div>
           </motion.div>
         </div>
-        <div className="h-full bg-[#7C5DFA] rounded-[24px] w-[90px] flex items-center justify-center gap-[8px] cursor-pointer">
-          <div className="h-8 w-8 rounded-full flex items-center justify-center bg-white">
-            <Image src={'/icon-plus.svg'} alt="plus" height={15} width={15} />
+        <Link href={`/add`} className="h-full">
+          <div className="h-full bg-[#7C5DFA] rounded-[24px] w-[90px] flex items-center justify-center gap-[8px] cursor-pointer">
+            <div className="h-8 w-8 rounded-full flex items-center justify-center bg-white">
+              <Image src={'/icon-plus.svg'} alt="plus" height={15} width={15} />
+            </div>
+            <p className="text-[15px] font-[500] text-white">New</p>
           </div>
-          <p className="text-[15px] font-[500] text-white">New</p>
-        </div>
+        </Link>
       </div>
     </main>
   );
