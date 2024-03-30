@@ -42,3 +42,9 @@
   background-image: url('/icon-check.svg'); /* Path to your check icon image */
   background-size: cover;
 }
+.btm {
+  border-radius: 0px 0px 8px 8px;
+}
+.top {
+  border-radius: 8px 8px 0px 0px;
+}
