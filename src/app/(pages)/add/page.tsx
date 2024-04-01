@@ -4,7 +4,7 @@ import Form from '@/app/components/Add/Form';
 import Goback from '@/app/components/about/Goback';
 import React from 'react';
 
-export default function page() {
+export default function Page() {
   const { mode } = useData();
   return (
     <div
